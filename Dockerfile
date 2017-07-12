@@ -1,0 +1,1 @@
+FROM coco/elasticsearch-reindexer
