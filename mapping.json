@@ -1,4 +1,20 @@
 {
+  "settings" : {
+    "analysis" : {
+      "analyzer" : {
+        "folding" : {
+          "tokenizer" : "standard",
+          "filter" : ["lowercase", "standard", "ascii_folding"]
+        }
+      },
+      "filter" : {
+        "ascii_folding" : {
+          "type" : "asciifolding",
+          "preserve_original" : true
+        }
+      }
+    }
+  },
   "mappings" : {
     "organisations": {
       "properties": {
@@ -27,6 +43,7 @@
               "index": "not_analyzed"
             },
             "mentionsCompletion": {
+              "analyzer": "folding",
               "type": "completion"
             }
           }
@@ -70,17 +87,11 @@
               "index": "not_analyzed"
             },
             "mentionsCompletion": {
+              "analyzer": "folding",
               "type": "completion"
             },
-            "completionByContext": {
-              "type": "completion",
-              "contexts": [{
-                "name" : "typeContext",
-                "type" : "category",
-                "path" : "_type"
-              }]
-            },
             "authorCompletionByContext": {
+              "analyzer": "folding",
               "type": "completion",
               "contexts": [
                 {
@@ -93,6 +104,15 @@
                   "type" : "category",
                   "path" : "isFTAuthor"
                 }]
+            },
+            "completionByContext": {
+              "analyzer": "folding",
+              "type": "completion",
+              "contexts": [{
+                "name" : "typeContext",
+                "type" : "category",
+                "path" : "_type"
+              }]
             }
           }
         },
@@ -145,6 +165,7 @@
               "index": "not_analyzed"
             },
             "mentionsCompletion": {
+              "analyzer": "folding",
               "type": "completion"
             }
           }
@@ -268,6 +289,7 @@
               "index": "not_analyzed"
             },
             "completionByContext": {
+              "analyzer": "folding",
               "type": "completion",
               "contexts": [{
                 "name" : "typeContext",
@@ -356,6 +378,7 @@
               "index": "not_analyzed"
             },
             "mentionsCompletion": {
+              "analyzer": "folding",
               "type": "completion"
             }
           }
