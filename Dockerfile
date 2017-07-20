@@ -1,1 +1,1 @@
-FROM coco/elasticsearch-reindexer:feature_tidy-up-error-logging
+FROM coco/elasticsearch-reindexer:0.0.1
