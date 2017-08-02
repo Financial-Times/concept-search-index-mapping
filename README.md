@@ -12,32 +12,32 @@ Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on exact match
    "query": {
       "bool": {
          "must": {
-        	"match" : {
-				"prefLabel.edge_ngram": {
-					"query":"donald trump"
-				}
-		    }
-    	 },
+            "match": {
+               "prefLabel.edge_ngram": {
+                  "query": "donald trump"
+               }
+            }
+         },
          "filter": {
             "terms": {
                "_type": [
-            		"people",
+                  "people",
                   "topics",
                   "organisations",
                   "locations"
-            	]
+               ]
             }
          },
          "should": [
-        	{
-        		"match" : {
-					"prefLabel": {
-						"query":"donald trump",
-						"boost": 0.1
-					}
-		    	}
-		    }
-    	 ],
+            {
+               "match": {
+                  "prefLabel": {
+                     "query": "donald trump",
+                     "boost": 0.1
+                  }
+               }
+            }
+         ],
          "boost": 1
       }
    }
@@ -68,12 +68,12 @@ Author boost using the `authorCompletionByContext` suggester:
          "text": "martin wol",
          "completion": {
             "field": "prefLabel.authorCompletionByContext",
-            "contexts":{
-            	"authorContext": {
-            		"context":"true",
-            		"boost": 2
-            	},
-            	"typeContext":"people"
+            "contexts": {
+               "authorContext": {
+                  "context": "true",
+                  "boost": 2
+               },
+               "typeContext": "people"
             }
          }
       }
