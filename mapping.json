@@ -60,8 +60,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -120,8 +119,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -211,8 +209,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -271,8 +268,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -327,8 +323,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -383,8 +378,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -450,8 +444,7 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -506,9 +499,8 @@
               "type": "date"
             },
             "publishReference": {
-              "type": "string",
-              "index": "not_analyzed"
-            },  
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
