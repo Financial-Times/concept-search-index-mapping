@@ -56,6 +56,12 @@
                "type": "string",
                "index": "not_analyzed"
             },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -108,6 +114,12 @@
             "authorities": {
                "type": "string",
                "index": "not_analyzed"
+            },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -193,6 +205,12 @@
                "type": "string",
                "index": "not_analyzed"
             },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -246,6 +264,12 @@
                "type": "string",
                "index": "not_analyzed"
             },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -295,6 +319,12 @@
                "type": "string",
                "index": "not_analyzed"
             },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -343,6 +373,12 @@
             "authorities": {
                "type": "string",
                "index": "not_analyzed"
+            },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
@@ -404,6 +440,12 @@
                "type": "string",
                "index": "not_analyzed"
             },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -452,6 +494,12 @@
             "authorities": {
                "type": "string",
                "index": "not_analyzed"
+            },
+            "lastModified": {
+              "type": "date"
+            },
+            "publishReference": {
+              "type":  "keyword"
             },
             "prefLabel": {
                "type": "string",
