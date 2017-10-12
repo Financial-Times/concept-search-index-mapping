@@ -1,0 +1,21 @@
+# Default values for concept-search-reindexer.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+service:
+  name: "" # The name of the service, should be defined in the specific app-configs folder.
+  hasHealthcheck: "true"
+replicaCount: 1
+image:
+  repository: coco/concept-search-index-mapping
+  pullPolicy: IfNotPresent
+resources:
+  limits:
+    memory: 256Mi
+env:
+  APP_PORT: ""
+  AUTH: ""
+  ELASTICSEARCH_INDEX_ALIAS: ""
+  ALIAS_FILTER_FILE: ""
+  ELASTICSEARCH_TRACE: ""
+  SYSTEM_CODE: ""
+  PANIC_GUIDE_URL: ""
