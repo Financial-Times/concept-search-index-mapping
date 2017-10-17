@@ -1,0 +1,68 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.service.name }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    visualize: "true"
+    app: {{ .Values.service.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.service.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.service.name }}
+        visualize: "true"
+    spec:
+      containers:
+      - name: {{ .Values.service.name }}
+        image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+        - name: APP_PORT
+          value: "{{ .Values.env.APP_PORT }}"
+        - name: AUTH
+          value: "{{ .Values.env.AUTH }}"
+        - name: ELASTICSEARCH_INDEX_ALIAS
+          value: "{{ .Values.env.ELASTICSEARCH_INDEX_ALIAS }}"
+        - name: ALIAS_FILTER_FILE
+          value: "{{ .Values.env.ALIAS_FILTER_FILE }}"
+        - name: ELASTICSEARCH_TRACE
+          value: "{{ .Values.env.ELASTICSEARCH_TRACE }}"
+        - name: SYSTEM_CODE
+          value: "{{ .Values.env.SYSTEM_CODE }}"
+        - name: PANIC_GUIDE_URL
+          value: "{{ .Values.env.PANIC_GUIDE_URL }}"
+        - name: ELASTICSEARCH_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: global-config
+              key: aws.elasticsearch.endpoint
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: global-secrets
+              key: aws.access_key_id
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: global-secrets
+              key: aws.secret_access_key
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 10
+        readinessProbe:
+          httpGet:
+            path: "/__gtg"
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 30
+        resources:
+{{ toYaml .Values.resources | indent 12 }}
+

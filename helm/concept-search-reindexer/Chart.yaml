@@ -1,0 +1,4 @@
+apiVersion: v1
+description: concept-search-reindexer Helm chart for Kubernetes
+name: concept-search-reindexer
+version: 0.0.0  # this entry can be left untouched as it is automatically handled by Jenkins pipeline
