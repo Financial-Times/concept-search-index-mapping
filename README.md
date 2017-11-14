@@ -5,7 +5,7 @@ The Docker image built by this project is based on the elasticsearch-reindexer. 
 
 # Example Queries
 
-Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on exact match:
+Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on a term match:
 
 ```
 {
@@ -34,6 +34,53 @@ Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on exact match
                   "prefLabel": {
                      "query": "donald trump",
                      "boost": 0.1
+                  }
+               }
+            }
+         ],
+         "boost": 1
+      }
+   }
+}
+```
+
+Abouts/Mentions with an additional boost using the `exact_match` analyzer:
+
+```
+{
+   "query": {
+      "bool": {
+         "must": {
+            "match": {
+               "prefLabel.edge_ngram": {
+                  "query": "new york"
+               }
+            }
+         },
+         "filter": {
+            "terms": {
+               "_type": [
+                  "people",
+                  "topics",
+                  "organisations",
+                  "locations"
+               ]
+            }
+         },
+         "should": [
+            {
+               "match": {
+                  "prefLabel": {
+                     "query": "new york",
+                     "boost": 0.1
+                  }
+               }
+            },
+            {
+               "term": {
+                  "prefLabel.exact_match": {
+                     "value": "new york",
+                     "boost": 0.5
                   }
                }
             }
