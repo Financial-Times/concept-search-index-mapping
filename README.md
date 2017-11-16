@@ -5,6 +5,64 @@ The Docker image built by this project is based on the elasticsearch-reindexer. 
 
 # Example Queries
 
+People search using 
+
+* the `edge_ngram` analyzer and a `0.1` boost on a term match
+* the isFTAuthor `1.81 boost
+* the `exact_match` analyzer  
+
+```
+{
+   "size" : 20,
+   "query": {
+      "bool": {
+         "must": {
+            "match" : {
+                "prefLabel.edge_ngram": {
+                    "query":"Donald Gi"
+                }
+            }
+         },
+         "filter": {
+            "term": {
+               "_type": "people"
+            }
+         },
+         "should": [
+            {
+               "term": {
+                  "isFTAuthor": {
+                    "value": "true",
+                    "boost": 1.8
+                  }
+               }
+            },
+            {
+               "match": {
+                  "prefLabel": {
+                    "query": "Donald Gi",
+                    "boost": 0.1
+                  }
+               }
+            },
+            {
+                "match": {
+                   "prefLabel.exact_match": {
+                      "query": "Donald Gi",
+                      "boost": 0.3
+                   }
+                }
+             }
+         ],
+         "minimum_should_match": 0,
+         "boost": 1
+      }
+   }
+}
+
+```
+
+
 Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on a term match:
 
 ```
@@ -90,8 +148,9 @@ Abouts/Mentions with an additional boost using the `exact_match` analyzer:
    }
 }
 ```
+Currently, only BRANDS search uses the suggester
 
-Abouts/Mentions using the `mentionsCompletion` suggester:
+@Deprecated Abouts/Mentions using the `mentionsCompletion` suggester:
 
 ```
 {
@@ -106,7 +165,7 @@ Abouts/Mentions using the `mentionsCompletion` suggester:
 }
 ```
 
-Author boost using the `authorCompletionByContext` suggester:
+@Deprecated Author boost using the `authorCompletionByContext` suggester:
 
 ```
 {
