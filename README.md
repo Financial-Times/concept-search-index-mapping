@@ -5,7 +5,65 @@ The Docker image built by this project is based on the elasticsearch-reindexer. 
 
 # Example Queries
 
-Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on exact match:
+People search using 
+
+* the `edge_ngram` analyzer and a `0.1` boost on a term match
+* the isFTAuthor `1.81 boost
+* the `exact_match` analyzer  
+
+```
+{
+   "size" : 20,
+   "query": {
+      "bool": {
+         "must": {
+            "match" : {
+                "prefLabel.edge_ngram": {
+                    "query":"Donald Gi"
+                }
+            }
+         },
+         "filter": {
+            "term": {
+               "_type": "people"
+            }
+         },
+         "should": [
+            {
+               "term": {
+                  "isFTAuthor": {
+                    "value": "true",
+                    "boost": 1.8
+                  }
+               }
+            },
+            {
+               "match": {
+                  "prefLabel": {
+                    "query": "Donald Gi",
+                    "boost": 0.1
+                  }
+               }
+            },
+            {
+                "match": {
+                   "prefLabel.exact_match": {
+                      "query": "Donald Gi",
+                      "boost": 0.3
+                   }
+                }
+             }
+         ],
+         "minimum_should_match": 0,
+         "boost": 1
+      }
+   }
+}
+
+```
+
+
+Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on a term match:
 
 ```
 {
@@ -44,7 +102,55 @@ Abouts/Mentions using the `edge_ngram` analyzer and a `0.1` boost on exact match
 }
 ```
 
-Abouts/Mentions using the `mentionsCompletion` suggester:
+Abouts/Mentions with an additional boost using the `exact_match` analyzer:
+
+```
+{
+   "query": {
+      "bool": {
+         "must": {
+            "match": {
+               "prefLabel.edge_ngram": {
+                  "query": "new york"
+               }
+            }
+         },
+         "filter": {
+            "terms": {
+               "_type": [
+                  "people",
+                  "topics",
+                  "organisations",
+                  "locations"
+               ]
+            }
+         },
+         "should": [
+            {
+               "match": {
+                  "prefLabel": {
+                     "query": "new york",
+                     "boost": 0.1
+                  }
+               }
+            },
+            {
+               "term": {
+                  "prefLabel.exact_match": {
+                     "value": "new york",
+                     "boost": 0.5
+                  }
+               }
+            }
+         ],
+         "boost": 1
+      }
+   }
+}
+```
+Currently, only BRANDS search uses the suggester
+
+@Deprecated Abouts/Mentions using the `mentionsCompletion` suggester:
 
 ```
 {
@@ -59,7 +165,7 @@ Abouts/Mentions using the `mentionsCompletion` suggester:
 }
 ```
 
-Author boost using the `authorCompletionByContext` suggester:
+@Deprecated Author boost using the `authorCompletionByContext` suggester:
 
 ```
 {

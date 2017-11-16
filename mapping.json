@@ -18,6 +18,14 @@
                   "ascii_folding",
                   "edge_ngram_filter"
                ]
+            },
+            "exact_match": {
+               "type": "custom",
+               "tokenizer": "keyword",
+               "filter": [
+                  "lowercase",
+                  "ascii_folding"
+               ]
             }
          },
          "filter": {
@@ -78,6 +86,10 @@
                   "mentionsCompletion": {
                      "analyzer": "folding",
                      "type": "completion"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             },
@@ -133,6 +145,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
@@ -224,6 +240,10 @@
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
                   },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
+                  },
                   "mentionsCompletion": {
                      "analyzer": "folding",
                      "type": "completion"
@@ -282,6 +302,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             },
@@ -337,6 +361,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             },
@@ -392,6 +420,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   },
                   "completionByContext": {
                      "analyzer": "folding",
@@ -458,6 +490,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             },
@@ -513,6 +549,10 @@
                      "type": "string",
                      "analyzer": "edge_ngram",
                      "search_analyzer": "standard"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
