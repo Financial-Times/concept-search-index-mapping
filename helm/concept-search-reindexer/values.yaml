@@ -11,6 +11,8 @@ image:
 resources:
   limits:
     memory: 256Mi
+  requests:
+    memory: 24Mi
 env:
   APP_PORT: ""
   AUTH: ""
