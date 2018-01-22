@@ -100,6 +100,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -194,6 +198,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -257,6 +265,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -316,6 +328,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -375,6 +391,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -445,6 +465,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -504,6 +528,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
@@ -567,6 +595,10 @@
                   "raw": {
                      "type": "string",
                      "index": "not_analyzed"
+                  },
+                  "exact_match": {
+                     "type": "string",
+                     "analyzer": "exact_match"
                   }
                }
             }
