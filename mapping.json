@@ -149,6 +149,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
