@@ -24,7 +24,8 @@
                "tokenizer": "keyword",
                "filter": [
                   "lowercase",
-                  "ascii_folding"
+                  "ascii_folding",
+                  "trim"
                ]
             }
          },
@@ -73,6 +74,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -81,7 +84,9 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
@@ -89,7 +94,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             },
@@ -103,7 +110,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -148,11 +157,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
@@ -201,7 +214,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -238,6 +253,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -246,11 +263,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
@@ -268,7 +289,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -305,6 +328,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -313,11 +338,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             },
@@ -331,7 +360,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -368,6 +399,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -376,11 +409,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             },
@@ -394,7 +431,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -431,6 +470,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -439,11 +480,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "completionByContext": {
                      "analyzer": "folding",
@@ -468,7 +513,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -505,6 +552,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -513,11 +562,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             },
@@ -531,7 +584,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
@@ -568,6 +623,8 @@
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
+               "index_options": "docs",
+               "norms": { "enabled": false },
                "fields": {
                   "raw": {
                      "type": "string",
@@ -576,11 +633,15 @@
                   "edge_ngram": {
                      "type": "string",
                      "analyzer": "edge_ngram",
-                     "search_analyzer": "standard"
+                     "search_analyzer": "standard",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   },
                   "mentionsCompletion": {
                      "analyzer": "folding",
@@ -598,7 +659,9 @@
                   },
                   "exact_match": {
                      "type": "string",
-                     "analyzer": "exact_match"
+                     "analyzer": "exact_match",
+                     "index_options": "docs",
+                     "norms": { "enabled": false }
                   }
                }
             }
