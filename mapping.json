@@ -88,10 +88,6 @@
                      "index_options": "docs",
                      "norms": { "enabled": false }
                   },
-                  "mentionsCompletion": {
-                     "analyzer": "folding",
-                     "type": "completion"
-                  },
                   "exact_match": {
                      "type": "string",
                      "analyzer": "exact_match",
@@ -168,37 +164,6 @@
                      "analyzer": "exact_match",
                      "index_options": "docs",
                      "norms": { "enabled": false }
-                  },
-                  "mentionsCompletion": {
-                     "analyzer": "folding",
-                     "type": "completion"
-                  },
-                  "authorCompletionByContext": {
-                     "analyzer": "folding",
-                     "type": "completion",
-                     "contexts": [
-                        {
-                           "name": "typeContext",
-                           "type": "category",
-                           "path": "_type"
-                        },
-                        {
-                           "name": "authorContext",
-                           "type": "category",
-                           "path": "isFTAuthor"
-                        }
-                     ]
-                  },
-                  "completionByContext": {
-                     "analyzer": "folding",
-                     "type": "completion",
-                     "contexts": [
-                        {
-                           "name": "typeContext",
-                           "type": "category",
-                           "path": "_type"
-                        }
-                     ]
                   }
                }
             },
@@ -274,10 +239,6 @@
                      "analyzer": "exact_match",
                      "index_options": "docs",
                      "norms": { "enabled": false }
-                  },
-                  "mentionsCompletion": {
-                     "analyzer": "folding",
-                     "type": "completion"
                   }
                }
             },
@@ -491,17 +452,6 @@
                      "analyzer": "exact_match",
                      "index_options": "docs",
                      "norms": { "enabled": false }
-                  },
-                  "completionByContext": {
-                     "analyzer": "folding",
-                     "type": "completion",
-                     "contexts": [
-                        {
-                           "name": "typeContext",
-                           "type": "category",
-                           "path": "_type"
-                        }
-                     ]
                   }
                }
             },
@@ -644,10 +594,6 @@
                      "analyzer": "exact_match",
                      "index_options": "docs",
                      "norms": { "enabled": false }
-                  },
-                  "mentionsCompletion": {
-                     "analyzer": "folding",
-                     "type": "completion"
                   }
                }
             },
