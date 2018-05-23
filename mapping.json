@@ -96,6 +96,10 @@
                   }
                }
             },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
+            },
             "aliases": {
                "type": "string",
                "analyzer": "standard",
@@ -171,6 +175,10 @@
                "type": "text",
                "index": true
             },
+            "isDeprecated": {
+               "type": "text",
+               "index": true
+            },
             "aliases": {
                "type": "string",
                "analyzer": "standard",
@@ -241,6 +249,10 @@
                      "norms": { "enabled": false }
                   }
                }
+            },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
             },
             "aliases": {
                "type": "string",
@@ -313,6 +325,10 @@
                   }
                }
             },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
+            },
             "aliases": {
                "type": "string",
                "analyzer": "standard",
@@ -383,6 +399,10 @@
                      "norms": { "enabled": false }
                   }
                }
+            },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
             },
             "aliases": {
                "type": "string",
@@ -455,6 +475,10 @@
                   }
                }
             },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
+            },
             "aliases": {
                "type": "string",
                "analyzer": "standard",
@@ -526,6 +550,10 @@
                   }
                }
             },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
+            },
             "aliases": {
                "type": "string",
                "analyzer": "standard",
@@ -596,6 +624,10 @@
                      "norms": { "enabled": false }
                   }
                }
+            },
+            "isDeprecated": {
+              "type": "text",
+              "index": true
             },
             "aliases": {
                "type": "string",
