@@ -97,8 +97,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -176,8 +175,7 @@
                "index": true
             },
             "isDeprecated": {
-               "type": "text",
-               "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -251,8 +249,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -326,8 +323,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -401,8 +397,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -476,8 +471,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -551,8 +545,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
@@ -626,8 +619,7 @@
                }
             },
             "isDeprecated": {
-              "type": "text",
-              "index": true
+              "type": "boolean"
             },
             "aliases": {
                "type": "string",
