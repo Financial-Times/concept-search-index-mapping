@@ -1,1 +1,1 @@
-FROM coco/elasticsearch-reindexer:0.0.4
+FROM coco/elasticsearch-reindexer:0.0.5
