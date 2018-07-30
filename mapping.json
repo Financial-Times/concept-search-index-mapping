@@ -71,6 +71,11 @@
             "publishReference": {
               "type":  "keyword"
             },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -144,6 +149,11 @@
             },
             "publishReference": {
               "type":  "keyword"
+            },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
             },
             "prefLabel": {
                "type": "string",
@@ -223,6 +233,11 @@
             "publishReference": {
               "type":  "keyword"
             },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -296,6 +311,11 @@
             },
             "publishReference": {
               "type":  "keyword"
+            },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
             },
             "prefLabel": {
                "type": "string",
@@ -371,6 +391,11 @@
             "publishReference": {
               "type":  "keyword"
             },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -444,6 +469,11 @@
             },
             "publishReference": {
               "type":  "keyword"
+            },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
             },
             "prefLabel": {
                "type": "string",
@@ -519,6 +549,11 @@
             "publishReference": {
               "type":  "keyword"
             },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
+            },
             "prefLabel": {
                "type": "string",
                "analyzer": "standard",
@@ -592,6 +627,11 @@
             },
             "publishReference": {
               "type":  "keyword"
+            },
+            "scopeNote": {
+              "type": "text",
+              "store": true,
+              "index": "no"
             },
             "prefLabel": {
                "type": "string",
