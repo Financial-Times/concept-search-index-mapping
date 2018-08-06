@@ -3,7 +3,30 @@ Elasticsearch mapping for the concept search index.
 
 The Docker image built by this project is based on the elasticsearch-reindexer. It applies the mapping.json file for the concepts index.
 
-For details about reindexing and adding a new field, please see [this](https://sites.google.com/a/ft.com/universal-publishing/documentation/elasticsearch-resources/upp-concepts).
+# Reindexing process tips & tricks
+In order to trigger a reindexing using the newest values from [mapping.json](mapping.json) you should create a new github release and follow the progress of the deployment in jenkins.
+
+## Things to do before triggering the jenkins job
+* Check the indexes that already exist in the ES instance: 
+`GET <aws_es_endpoint>/_cat/indices?v`
+* Check to see which index is un use: 
+`GET <aws_es_endpoint>/_cat/aliases`
+* Delete the oldest index. Usually, there are two indexes available, one that is referenced by the `concepts` alias, and another one that should be an older version. This is needed because most of the time there is not enough disk space for the new index: 
+`DELETE <aws_es_endpoint>/<targeted_index_name>`
+
+## Things to do during the reindexing process
+Once triggered, here's how to monitor the reindexing process:
+* Get the list of ES reindexing tasks: 
+`GET <aws_es_endpoint>/_tasks?detailed=true&actions=*reindex`
+* Get the task identifier (which should be something similar to `r1A2WoRbTwKZ516z6NEs5A:36619`) and use it for fetching info just for your task: 
+`GET <aws_es_endpoint>/_tasks/r1A2WoRbTwKZ516z6NEs5A%3A36619` (note that this should be encoded accordingly `:` => `%3A`)
+
+## Actual values
+For being able to execute all the above commands, you will need the following:
+* aws_es_endpoint: you can get this directly from AWS->Elasticsearch->Endpoint
+* Credentials(AwsAccessKey, AwsSecretAccessKey): get them from LastPass -> `AWS ElasticSearch - Provisioning Setup`
+
+
 # Example Queries
 
 People search using 
