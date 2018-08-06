@@ -3,7 +3,6 @@ Elasticsearch mapping for the concept search index.
 
 The Docker image built by this project is based on the elasticsearch-reindexer. It applies the mapping.json file for the concepts index.
 
-For details about reindexing and adding a new field, please see [this](https://sites.google.com/a/ft.com/universal-publishing/documentation/elasticsearch-resources/upp-concepts).
 # Example Queries
 
 People search using 
