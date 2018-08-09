@@ -2,7 +2,8 @@
   "terms": {
     "authorities": [
       "TME",
-      "Smartlogic"
+      "Smartlogic",
+      "ManagedLocation"
     ]
   }
 }
