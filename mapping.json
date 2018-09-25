@@ -732,7 +732,7 @@
         }
       }
     },
-    "alphavilleseries": {
+    "alphaville-series": {
       "properties": {
         "id": {
           "type": "keyword",
