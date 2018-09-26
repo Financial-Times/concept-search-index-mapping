@@ -7,7 +7,7 @@ The Docker image built by this project is based on the elasticsearch-reindexer. 
 In order to trigger a reindexing using the newest values from [mapping.json](mapping.json) you should create a new github release and follow the progress of the deployment in jenkins.
 
 ## Things to do before triggering the jenkins job
-* Check the indexes that already exist in the ES instance:
+* Check the indexes that already exist in the ES instance by running:
 `GET <aws_es_endpoint>/_cat/indices?v`
 * Check to see which index is un use:
 `GET <aws_es_endpoint>/_cat/aliases`
