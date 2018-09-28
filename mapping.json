@@ -857,6 +857,13 @@
             "raw": {
               "type": "keyword"
             },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
+            },
             "exact_match": {
               "type": "text",
               "analyzer": "exact_match",
