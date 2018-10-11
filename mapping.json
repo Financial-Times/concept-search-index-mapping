@@ -116,6 +116,13 @@
               "analyzer": "exact_match",
               "index_options": "docs",
               "norms": false
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             }
           }
         },
@@ -204,6 +211,13 @@
               "analyzer": "exact_match",
               "index_options": "docs",
               "norms": false
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             }
           }
         },
@@ -284,6 +298,13 @@
           "fields": {
             "raw": {
               "type": "keyword"
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             },
             "exact_match": {
               "type": "text",
@@ -371,6 +392,13 @@
             "raw": {
               "type": "keyword"
             },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
+            },
             "exact_match": {
               "type": "text",
               "analyzer": "exact_match",
@@ -456,6 +484,13 @@
           "fields": {
             "raw": {
               "type": "keyword"
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             },
             "exact_match": {
               "type": "text",
@@ -543,6 +578,13 @@
             "raw": {
               "type": "keyword"
             },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
+            },
             "exact_match": {
               "type": "text",
               "analyzer": "exact_match",
@@ -628,6 +670,13 @@
           "fields": {
             "raw": {
               "type": "keyword"
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             },
             "exact_match": {
               "type": "text",
@@ -715,6 +764,13 @@
             "raw": {
               "type": "keyword"
             },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
+            },
             "exact_match": {
               "type": "text",
               "analyzer": "exact_match",
@@ -800,6 +856,13 @@
           "fields": {
             "raw": {
               "type": "keyword"
+            },
+            "edge_ngram": {
+              "type": "text",
+              "analyzer": "edge_ngram",
+              "search_analyzer": "folding",
+              "index_options": "positions",
+              "norms": false
             },
             "exact_match": {
               "type": "text",
