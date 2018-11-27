@@ -130,6 +130,9 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "recentAnnotationsCount": {
+              "type": "integer"
             }
           }
         }
