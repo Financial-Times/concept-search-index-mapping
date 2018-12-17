@@ -131,7 +131,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -229,7 +229,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
 
@@ -326,7 +326,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
 
@@ -423,7 +423,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -519,7 +519,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -615,7 +615,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -711,7 +711,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -807,7 +807,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -903,7 +903,7 @@
             "annotationsCount": {
               "type": "integer"
             },
-            "pastWeekAnnotationsCount": {
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
