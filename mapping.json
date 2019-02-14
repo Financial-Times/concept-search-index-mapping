@@ -140,6 +140,9 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
           }
         }
@@ -235,7 +238,11 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
+
           }
         }
       }
@@ -328,7 +335,11 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
+
           }
         }
       }
@@ -420,6 +431,9 @@
         "metrics": {
           "properties": {
             "annotationsCount": {
+              "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -514,6 +528,9 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
           }
         }
@@ -606,6 +623,9 @@
         "metrics": {
           "properties": {
             "annotationsCount": {
+              "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
@@ -700,6 +720,9 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
           }
         }
@@ -793,6 +816,9 @@
           "properties": {
             "annotationsCount": {
               "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
+              "type": "integer"
             }
           }
         }
@@ -885,6 +911,9 @@
         "metrics": {
           "properties": {
             "annotationsCount": {
+              "type": "integer"
+            },
+            "prevWeekAnnotationsCount": {
               "type": "integer"
             }
           }
