@@ -1,8 +1,21 @@
 {
-  "terms": {
-    "authorities": [
-      "TME",
-      "Smartlogic"
+  "bool": {
+    "should": [
+      {
+        "terms": {
+          "authorities": [
+            "TME",
+            "Smartlogic"
+          ]
+        }
+      },
+      {
+        "terms": {
+          "directType": [
+            "http://www.ft.com/ontology/company/PublicCompany"
+          ]
+        }
+      }
     ]
   }
 }
