@@ -6,6 +6,7 @@ The Docker image built by this project is based on the elasticsearch-reindexer. 
 # Reindexing process tips & tricks
 In order to trigger a reindexing using the newest values from [mapping.json](mapping.json) you should create a new github release and follow the progress of the deployment in jenkins.
 
+**NOTE**: If you are reindexing in PRODUCTION, you should do one region at a time to avoid blocking the whole concept publishing flow. If downtime is inevitable, you should notify the `@smartlogic-users` slack group.
 ## Things to do before triggering the jenkins job
 * Check the indexes that already exist in the ES instance by running:
 `GET <aws_es_endpoint>/_cat/indices?v`
