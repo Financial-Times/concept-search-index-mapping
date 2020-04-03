@@ -1,0 +1,10 @@
+version: 2.1
+
+orbs:
+  ft-golang-ci: financial-times/golang-ci@1
+
+workflows:
+  build-docker-image:
+    jobs:
+      - ft-golang-ci/docker-build:
+          name: build-docker-image
