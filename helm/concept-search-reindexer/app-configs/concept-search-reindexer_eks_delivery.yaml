@@ -1,0 +1,13 @@
+# Values used for the deployed application.
+replicaCount: 1
+service:
+  name: concept-search-reindexer
+eksCluster: true
+env:
+  APP_PORT: "8080"
+  AUTH: "aws"
+  ELASTICSEARCH_INDEX_ALIAS: "concepts"
+  ALIAS_FILTER_FILE: "./alias-filter.json"
+  ELASTICSEARCH_TRACE: "false"
+  SYSTEM_CODE: "concepts-reindexer"
+  PANIC_GUIDE_URL: "https://dewey.ft.com/concepts-reindexer.html"
