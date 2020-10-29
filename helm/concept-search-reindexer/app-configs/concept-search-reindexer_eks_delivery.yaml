@@ -2,7 +2,6 @@
 replicaCount: 0
 service:
   name: concept-search-reindexer
-eksCluster: true
 env:
   APP_PORT: "8080"
   AUTH: "aws"
