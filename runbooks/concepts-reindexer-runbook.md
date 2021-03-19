@@ -1,3 +1,7 @@
+<!--
+    Written in the format prescribed by https://github.com/Financial-Times/runbook.md.
+    Any future edits should abide by this format.
+-->
 # UPP Concepts ElasticSearch Reindexer
 
 Checks the existing alias for the concepts ElasticSearch index and if necessary, creates a new mapping, reindexes the data, and adjusts the alias to point to the new index.
@@ -8,7 +12,7 @@ concepts-reindexer
 
 ## Primary URL
 
-<https://upp-prod-delivery-glb.upp.ft.com/__concept-search-reindexer/>
+https://upp-prod-delivery-glb.upp.ft.com/__concept-search-reindexer/
 
 ## Service Tier
 
@@ -17,24 +21,6 @@ Bronze
 ## Lifecycle Stage
 
 Production
-
-## Delivered By
-
-content
-
-## Supported By
-
-content
-
-## Known About By
-
-- elitsa.pavlova
-- kalin.arsov
-- miroslav.gatsanoga
-- ivan.nikolov
-- marina.chompalova
-- hristo.georgiev
-- mihail.mihaylov
 
 ## Host Platform
 
@@ -52,9 +38,19 @@ No
 
 No
 
-## Dependencies
+<!-- Placeholder - remove HTML comment markers to activate
+## Can Download Personal Data
+Choose Yes or No
 
-- concept-elasticsearch-cluster
+...or delete this placeholder if not applicable to this system
+-->
+
+<!-- Placeholder - remove HTML comment markers to activate
+## Can Contact Individuals
+Choose Yes or No
+
+...or delete this placeholder if not applicable to this system
+-->
 
 ## Failover Architecture Type
 
@@ -93,6 +89,14 @@ Manual
 
 The release is triggered by making a Github release which is then picked up by a Jenkins multibranch pipeline. The Jenkins pipeline should be manually started in order for it to deploy the helm package to the Kubernetes clusters. The deployment is configured to be with zero replicas, scaling it up will trigger the ES reindexing process. If reindexing is done in Production, it should be done one region at a time to avoid blocking the whole concept publishing flow.
 
+<!-- Placeholder - remove HTML comment markers to activate
+## Heroku Pipeline Name
+Enter descriptive text satisfying the following:
+This is the name of the Heroku pipeline for this system. If you don't have a pipeline, this is the name of the app in Heroku. A pipeline is a group of Heroku apps that share the same codebase where each app in a pipeline represents the different stages in a continuous delivery workflow, i.e. staging, production.
+
+...or delete this placeholder if not applicable to this system
+-->
+
 ## Key Management Process Type
 
 Manual
@@ -106,8 +110,8 @@ To rotate credentials you need to login to a particular cluster and update varni
 
 Service in UPP K8S delivery clusters:
 
-- Delivery-Prod-EU health: <https://upp-prod-delivery-eu.upp.ft.com/__health/__pods-health?service-name=concept-search-reindexer>
-- Delivery-Prod-US health: <https://upp-prod-delivery-us.upp.ft.com/__health/__pods-health?service-name=concept-search-reindexer>
+*   Delivery-Prod-EU health: <https://upp-prod-delivery-eu.upp.ft.com/__health/__pods-health?service-name=concept-search-reindexer>
+*   Delivery-Prod-US health: <https://upp-prod-delivery-us.upp.ft.com/__health/__pods-health?service-name=concept-search-reindexer>
 
 ## First Line Troubleshooting
 
