@@ -21,3 +21,4 @@ env:
   ELASTICSEARCH_TRACE: ""
   SYSTEM_CODE: ""
   PANIC_GUIDE_URL: ""
+serviceAccountName: eksctl-concept-search-reindexer-serviceaccount
