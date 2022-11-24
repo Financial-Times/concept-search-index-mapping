@@ -52,6 +52,11 @@ spec:
             configMapKeyRef:
               name: global-config
               key: aws.concepts.elasticsearch.endpoint
+        - name: ELASTICSEARCH_REGION
+          valueFrom:
+            configMapKeyRef:
+              name: global-config
+              key: aws.region
         ports:
         - containerPort: 8080
         livenessProbe:
