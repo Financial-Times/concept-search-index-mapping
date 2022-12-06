@@ -7,7 +7,7 @@ service:
 replicaCount: 1
 image:
   repository: coco/concept-search-index-mapping
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 resources:
   limits:
     memory: 256Mi
