@@ -18,24 +18,6 @@ Bronze
 
 Production
 
-## Delivered By
-
-content
-
-## Supported By
-
-content
-
-## Known About By
-
-- elitsa.pavlova
-- kalin.arsov
-- miroslav.gatsanoga
-- ivan.nikolov
-- marina.chompalova
-- hristo.georgiev
-- mihail.mihaylov
-
 ## Host Platform
 
 AWS
@@ -51,10 +33,6 @@ No
 ## Contains Sensitive Data
 
 No
-
-## Dependencies
-
-- concept-elasticsearch-cluster
 
 ## Failover Architecture Type
 
