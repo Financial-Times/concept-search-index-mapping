@@ -7,7 +7,7 @@ service:
 replicaCount: 1
 image:
   repository: coco/concept-search-index-mapping
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 resources:
   limits:
     memory: 256Mi
@@ -21,3 +21,4 @@ env:
   ELASTICSEARCH_TRACE: ""
   SYSTEM_CODE: ""
   PANIC_GUIDE_URL: ""
+serviceAccountName: eksctl-concept-search-reindexer-serviceaccount
