@@ -147,6 +147,18 @@
             "type": "integer"
           }
         }
+      },
+      "NAICS": {
+        "type": "nested",
+        "properties": {
+          "uuid": {
+            "type": "keyword",
+            "norms": false
+          },
+          "rank": {
+            "type": "integer"
+          }
+        }
       }
     }
   }
